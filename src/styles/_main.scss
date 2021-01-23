@@ -1,0 +1,274 @@
+main {
+  //height: 100%;
+  background-color: $mainColour;
+  @include flexCenter(column);
+  justify-content: space-evenly;
+  @include transition;
+  background-attachment: fixed;
+
+  & > :first-child {
+    margin-top: 10rem;
+  }
+
+  & > section {
+    width: 100%;
+    padding: 0 5rem;
+  }
+}
+.section-title {
+  margin-bottom: 5rem;
+}
+
+.section-content {
+  @include flexCenter(column);
+  background-color: transparent;
+}
+
+.carousel {
+  width: 90vw;
+  height: 60rem;
+  margin-bottom: 20rem;
+
+  img {
+    width: 100%;
+    height: 60rem;
+    object-fit: cover;
+  }
+
+  .slick-next {
+    right: -10%;
+  }
+  .slick-prev {
+    left: -10%;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: $primaryColour;
+  }
+
+  .slick-dots li button:before {
+    font-size: 2rem;
+    color: #000;
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: $primaryColour;
+  }
+}
+
+.insights {
+  padding-top: 1rem;
+  @include flexCenter(column);
+  justify-content: center;
+  position: relative;
+
+  .section-content {
+    justify-content: center;
+  }
+
+  .card {
+    cursor: pointer;
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    background-color: #fff;
+    height: 42rem;
+    width: 29rem;
+    margin: 1rem 2rem;
+    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.4);
+    transition: 0.5s ease-in-out;
+
+    & .card-icon {
+      background-color: $secondaryColour;
+      padding: 1rem 0;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      clip-path: circle(14rem at center 0);
+      transition: 0.5s ease-in-out;
+    }
+
+    & .card-text {
+      padding: 2rem;
+      position: absolute;
+      top: 40%;
+      text-align: center;
+      color: #666;
+    }
+
+    & i {
+      color: $primaryColour;
+      font-size: 2rem;
+    }
+  }
+}
+
+.about-us {
+  background-color: $primaryColour;
+  @include flexCenter(column);
+  justify-content: center;
+  align-content: center;
+  color: white;
+  z-index: 0;
+
+  .section-content {
+    justify-content: center;
+  }
+
+  .owner {
+    @include flexCenter(column);
+    margin: 5rem;
+    img {
+      border-radius: 3rem;
+      width: 26rem;
+      display: flex;
+      margin-bottom: 2rem;
+    }
+    .name-field {
+      position: relative;
+      @include flexCenter(column);
+      width: 100%;
+      p {
+        font-family: $secondaryFont;
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .description {
+    @include flexCenter(column);
+    justify-content: flex-start;
+    line-height: 3rem;
+
+    & > p {
+      font-weight: bold;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+  }
+
+  & > * {
+  }
+}
+
+/*-------------- Animations ---------*/
+
+/*------------- Reponsive ---------*/
+//Tablet
+@media only screen and (min-width: map-get($breakpoints, tablet)) {
+  .carousel {
+    width: 80vw;
+    height: 40vw;
+    margin-bottom: 20rem;
+
+    img {
+      width: 100%;
+      height: 40vw;
+      object-fit: cover;
+    }
+
+    .slick-next,
+    .slick-prev {
+      transform: scale(3);
+    }
+  }
+  .insights {
+    .section-content {
+      flex-direction: row;
+    }
+
+    .card {
+      width: 32rem;
+    }
+  }
+
+  .about-us {
+    .owner {
+      img {
+        width: 40rem;
+      }
+    }
+
+    .description {
+      width: 80%;
+      line-height: 3.5rem;
+    }
+  }
+
+  //Desktop
+
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+    .insights {
+      .card {
+        width: 30rem;
+      }
+      &:hover .card {
+        transform: scale(0.9);
+      }
+      .card {
+        &:hover.card {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .about-us {
+      .owner {
+        img {
+          width: 45rem;
+        }
+      }
+      .section-content {
+        flex-direction: row;
+      }
+      .description {
+        height: 50rem;
+        width: 40%;
+      }
+    }
+  }
+}
+
+/*------------ Dark mode colours ----------*/
+
+main.dark-mode {
+  background-color: black;
+  & .insights {
+    .section-title {
+      background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+      color: rgba(255, 255, 63, 0.2);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+    }
+    .card {
+      box-shadow: 0 3rem 2rem rgba(255, 255, 0, 0.4);
+      .card-icon {
+        background-color: yellow;
+      }
+    }
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: rgb(247, 252, 11);
+  }
+
+  .slick-dots li button:before {
+    color: white;
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: rgb(247, 252, 0);
+  }
+}
+
+/* .blob {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  fill: #023f92;
+  width: 40rem;
+  z-index: -1;
+} */

@@ -1,0 +1,77 @@
+.footer-svg {
+  background-color: $primaryColour;
+}
+
+path {
+  transition: 0.5s ease-in-out;
+}
+
+footer {
+  min-height: 18vh;
+  width: 100%;
+  color: white;
+  background-color: $headerColour;
+
+  //background-image: $gradient;
+  @include transition;
+  position: static;
+  @include flexCenter(column);
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+
+  & > * {
+    margin: 1rem 0;
+    background-color: transparent;
+  }
+
+  .footer-contacts {
+    width: 80%;
+    @include flexCenter(row);
+    justify-content: space-around;
+  }
+  .copyright {
+    font-weight: bold;
+    color: yellow;
+    width: 70%;
+  }
+
+  .developer {
+    span {
+      color: gold;
+    }
+  }
+
+  i {
+    font-size: 3.2rem;
+    transition: 0.3s ease-in;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  .fa-envelope:hover {
+    color: #eaf4f4;
+  }
+  .fa-linkedin:hover {
+    color: #2867b2;
+  }
+}
+
+/*------------- Reponsive ---------*/
+// Tablet
+@media only screen and (min-width: map-get($breakpoints, tablet)) {
+  // Desktop
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+    footer {
+      i {
+        font-size: 3.8rem;
+      }
+    }
+  }
+}
+
+/*------------ Dark mode colours ----------*/
+
+footer.dark-mode {
+  background-color: $dmBgColour1;
+  //background-image: $dmGradient;
+}

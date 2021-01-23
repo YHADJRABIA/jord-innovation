@@ -1,0 +1,158 @@
+// Navigation bar
+
+nav {
+  width: 100%;
+  min-height: 10vh;
+  background-color: $headerColour;
+  //background-image: $gradient;
+  @include flexCenter(row);
+  @include transition;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
+  .nav-logo {
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 28%;
+    height: 50%;
+    letter-spacing: 0.5rem;
+    color: white;
+    span {
+      line-height: 90%;
+      font-size: 3.5rem;
+      font-weight: bold;
+      color: red;
+    }
+
+    p {
+      font-family: sans-serif;
+      font-size: 1.1rem;
+    }
+  }
+
+  .nav-links {
+    display: none;
+    color: $mainColour;
+    li {
+      transition: transform 0.3s ease-out;
+      &:hover {
+        color: yellow;
+        transform: translateY(-1.1rem);
+      }
+    }
+  }
+
+  .flags {
+    @include flexCenter(row);
+    justify-content: space-around;
+    & > * {
+      margin: 2rem;
+      cursor: pointer;
+      border: 1px solid hsla(0, 0%, 100%, 0.329);
+      height: 2.5rem;
+    }
+  }
+}
+
+/*-- Dark mode toggler --*/
+.theme-toggler {
+  .dark-mode-checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .dark-mode-label {
+    background-color: #111;
+    border: $border;
+    border-radius: 5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    position: relative;
+    height: 2.5rem;
+    width: 5rem;
+    transform: scale(1.5);
+
+    // Moon icon
+    & > i:first-child {
+      font-size: 1.5rem;
+      color: #f1c40f;
+    }
+
+    // Sun icon
+    & > i:nth-child(n + 1) {
+      color: #f39c12;
+    }
+  }
+
+  .dark-mode-label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0.1rem;
+    height: 2.2rem;
+    width: 2.2rem;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .dark-mode-checkbox:checked + .dark-mode-label .ball {
+    transform: translateX(2.4rem);
+  }
+}
+
+/*---------- Animations --------*/
+
+/*------------- Reponsive ---------*/
+// Tablet
+@media only screen and (min-width: map-get($breakpoints, tablet)) {
+  nav {
+    .nav-links {
+      width: 30%;
+      @include flexCenter(row);
+      justify-content: space-between;
+    }
+  }
+
+  // Desktop
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+    nav {
+      .nav-links {
+        width: 20%;
+      }
+      .nav-logo {
+        width: 15%;
+        span {
+          font-size: 5rem;
+        }
+        p {
+          font-size: 1.6rem;
+        }
+      }
+
+      .flags > * {
+        height: 3.8rem;
+        width: 5.6rem;
+        transition: transform 0.3s ease-out;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+/*------------ Dark mode colours ----------*/
+
+nav.dark-mode {
+  background-color: $dmBgColour1;
+  //background-image: $dmGradient;
+}

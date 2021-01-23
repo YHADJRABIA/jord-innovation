@@ -1,0 +1,43 @@
+{
+  "languages": {
+    "en": "English",
+    "sv": "Swedish"
+  },
+
+  "navNames": {
+    "about": "About us",
+    "insight": "Our insights"
+  },
+
+  "insights": {
+    "title": "Our insights"
+  },
+
+  "problem": {
+    "title": "the issue",
+    "content": "300 millions of tealights are sold in Sweden each year. Waste management isn't working and there is a risk of burning several hundred tonnes of fossil raw materials."
+  },
+  "solution": {
+    "title": "our solution",
+    "content": "We have developed tealights out of renewable materials that are also biodegradable."
+  },
+  "technology": {
+    "title": "our technology",
+    "content": "The idea is that no matter where the waste from our tealights might end up, it would be less damaging than the current alternative as they are compostable."
+  },
+  "your-choice": {
+    "title": "your choice matters",
+    "content": "We aim to make it easy for you by giving you the option to directly help the environment. We shift responsibility from consumer to producer."
+  },
+
+  "about-us": {
+    "title": "About us",
+    "paragraph-1": "Jord innovation was founded in 2019 by Axel Häger. The company has since worked with and developed a new use of biomaterials to turn finite materials such as plastic and metal into consumer products.",
+    "paragraph-2": "By shifting the environmental responsibility from consumer to producer, we reduce the risk of large quantities of metal and plastic being poorly recycled. Tealights are an important illustration of our biomaterial's potential.",
+    "job-title": "CEO & founder"
+  },
+
+  "madeBy": "Developed & translated by",
+
+  "developer": "Developer"
+}

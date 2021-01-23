@@ -1,0 +1,187 @@
+// @author Yacine Hadj Rabia
+
+//Fonts
+
+@import url("https://fonts.googleapis.com/css?family=Oswald|Poppins|Roboto+Slab|Lobster");
+
+/*------------------------------- Sass parameters ---------------------------------------*/
+//Font types
+$primaryFont: "Roboto Slab";
+$secondaryFont: "Lobster";
+$regularFont: "Poppins";
+
+/*-- Colours --*/
+
+// Regular mode
+
+$primaryColour: #0be001;
+$secondaryColour: #e2e2e2;
+$mainColour: #edf6f9;
+$headerColour: #3bb78f;
+$gradient: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+$border: 1px groove #bdbdbd;
+
+// Dark mode
+$dmPrimaryColour: #0d2818;
+$dmSecondaryColour: #8b8b8b;
+$dmBgColour1: #553555;
+$dmBgColour2: #8b8b8b;
+
+$dmGradient: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+
+//linear-gradient(315deg, #000000 0%, #414141 74%);
+
+/*- Centred flex -*/
+@mixin flexCenter($direction) {
+  display: flex;
+  align-items: center;
+  flex-flow: wrap $direction;
+}
+
+/*- Dark mode transitions -*/
+
+@mixin transition {
+  transition: background-color 0.5s ease-in-out, color 0.5s linear,
+    background-image 0.5s ease-in-out;
+}
+
+/*- Reset params -*/
+@mixin initialProperties {
+  position: initial;
+  min-height: inherit;
+  transform: none;
+}
+
+/*------------------------------ Global parameters ------------------------------------*/
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: $regularFont, sans-serif;
+  background-color: inherit;
+  background-color: transparent;
+}
+
+/* Responsive calibration — 1rem = 10px, footer adjustment */
+html {
+  font-size: 62.5%;
+  position: relative;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Fonts */
+h1 {
+}
+
+h2 {
+  font-family: $primaryFont;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+h3 {
+  color: #000;
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  letter-spacing: 150%;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+small {
+  font-size: 1.5rem;
+}
+
+// To offset the sticky nav
+a.anchor {
+  display: block;
+  position: relative;
+  top: -25rem;
+  visibility: hidden;
+}
+
+li a {
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
+/* Various */
+
+i {
+  cursor: pointer;
+}
+
+img {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+}
+
+/*---------- Reponsive parameters ---------*/
+$breakpoints: (
+  phone: 640px,
+  tablet: 768px,
+  desktop: 1024px,
+) !default;
+
+/* Effects and animations */
+
+.loading {
+  width: 80%;
+  height: 50rem;
+  transform: translateY(50%);
+}
+
+.underlined {
+  position: relative;
+  margin-right: 1rem;
+}
+.underlined:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 7px;
+  width: 100%;
+  border: solid 2px #cb1829;
+  border-color: #cb1829 transparent transparent transparent;
+  border-radius: 50%;
+}
+
+/*--- Imports ---*/
+@import "./header";
+@import "./main";
+@import "./footer";
+
+/*------------- Reponsive ---------*/
+//Tablet
+@media only screen and (min-width: map-get($breakpoints, tablet)) {
+  //Desktop
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+    small {
+      font-size: 2rem;
+    }
+  }
+}

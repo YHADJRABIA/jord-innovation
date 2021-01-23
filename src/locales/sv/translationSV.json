@@ -1,0 +1,41 @@
+{
+  "languages": {
+    "en": "Engelska",
+    "sv": "Svenska"
+  },
+  "navNames": {
+    "about": "Om oss",
+    "insight": "Insikter"
+  },
+
+  "insights": {
+    "title": "Insikter"
+  },
+
+  "problem": {
+    "title": "problem",
+    "content": "Det säljs 300 miljoner värmeljus i Sverige varje år. Avfallshanteringen fungerar inte och vi riskerar att elda upp flera hundra ton fossil råvara."
+  },
+  "solution": {
+    "title": "vår lösning",
+    "content": "Vi har utvecklat ett värmeljus i förnyelsebart material som dessutom är biologiskt nedbrytbart. "
+  },
+  "technology": {
+    "title": "teknik",
+    "content": "Tanken är att oavsett vart avfallet från våra värmeljus hamnar så ska det göra mindre skada än nuvarande alternativ. De är komposterbara i hemkompost."
+  },
+  "your-choice": {
+    "title": "ditt val gör skillnad",
+    "content": "Vi vill göra det enkelt för dig genom att ge dig ett val, ett val där du känner direkt att du gör ett val för miljön. Vi flyttar ansvaret från konsument till producent."
+  },
+
+  "about-us": {
+    "title": "Om oss",
+    "paragraph-1": "Jord innovation grundades 2019 av Axel Häger. Företaget har sedan dess arbetat med och utvecklat användandet av nya biomaterial för att ersätta ändliga material såsom plast och metall i konsumentprodukter.",
+    "paragraph-2": "Genom att flytta miljöansvaret från konsument till producent minskar vi risken att stora mängder metall och plast inte återvinns korrekt.  Värmeljuset är ett viktigt exempel på vad vårt biomaterial klarar av.",
+    "job-title": "VD & grundare"
+  },
+
+  "madeBy": "Tillverkad & översätt av",
+  "developer": "Utvecklare"
+}

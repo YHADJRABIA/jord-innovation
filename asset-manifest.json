@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/jord-innovation/static/css/main.5c94c467.chunk.css",
+    "main.js": "/jord-innovation/static/js/main.7d43401c.chunk.js",
+    "main.js.map": "/jord-innovation/static/js/main.7d43401c.chunk.js.map",
+    "runtime-main.js": "/jord-innovation/static/js/runtime-main.89811817.js",
+    "runtime-main.js.map": "/jord-innovation/static/js/runtime-main.89811817.js.map",
+    "static/css/2.ef7242cb.chunk.css": "/jord-innovation/static/css/2.ef7242cb.chunk.css",
+    "static/js/2.8d3aa227.chunk.js": "/jord-innovation/static/js/2.8d3aa227.chunk.js",
+    "static/js/2.8d3aa227.chunk.js.map": "/jord-innovation/static/js/2.8d3aa227.chunk.js.map",
+    "index.html": "/jord-innovation/index.html",
+    "static/css/2.ef7242cb.chunk.css.map": "/jord-innovation/static/css/2.ef7242cb.chunk.css.map",
+    "static/css/main.5c94c467.chunk.css.map": "/jord-innovation/static/css/main.5c94c467.chunk.css.map",
+    "static/js/2.8d3aa227.chunk.js.LICENSE.txt": "/jord-innovation/static/js/2.8d3aa227.chunk.js.LICENSE.txt",
+    "static/media/axel.4d707ed4.jpg": "/jord-innovation/static/media/axel.4d707ed4.jpg",
+    "static/media/img1.fa43933a.jpg": "/jord-innovation/static/media/img1.fa43933a.jpg",
+    "static/media/img2.061c5e5f.jpg": "/jord-innovation/static/media/img2.061c5e5f.jpg",
+    "static/media/img3.340ff3d3.jpg": "/jord-innovation/static/media/img3.340ff3d3.jpg",
+    "static/media/img4.3298fcb1.jpg": "/jord-innovation/static/media/img4.3298fcb1.jpg",
+    "static/media/slick-theme.css": "/jord-innovation/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.89811817.js",
+    "static/css/2.ef7242cb.chunk.css",
+    "static/js/2.8d3aa227.chunk.js",
+    "static/css/main.5c94c467.chunk.css",
+    "static/js/main.7d43401c.chunk.js"
+  ]
+}

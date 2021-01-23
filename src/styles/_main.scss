@@ -25,7 +25,7 @@ main {
 }
 
 .carousel {
-  width: 90vw;
+  width: 40rem;
   height: 60rem;
   margin-bottom: 20rem;
 
@@ -236,11 +236,9 @@ main.dark-mode {
   background-color: black;
   & .insights {
     .section-title {
-      background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
-      color: rgba(255, 255, 63, 0.2);
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
+      color: yellow;
     }
+
     .card {
       box-shadow: 0 3rem 2rem rgba(255, 255, 0, 0.4);
       .card-icon {

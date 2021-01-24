@@ -1,6 +1,8 @@
 // Navigation bar
 
 nav {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   width: 100%;
   min-height: 10vh;
   background-color: $headerColour;
@@ -10,7 +12,7 @@ nav {
   justify-content: space-around;
   position: sticky;
   top: 0;
-  z-index: 5;
+  z-index: 999;
 
   .nav-logo {
     cursor: pointer;
@@ -78,7 +80,7 @@ nav {
     position: relative;
     height: 2.5rem;
     width: 5rem;
-    transform: scale(1.5);
+    transform: scale(1.2);
 
     // Moon icon
     & > i:first-child {
@@ -119,6 +121,11 @@ nav {
       width: 30%;
       @include flexCenter(row);
       justify-content: space-between;
+    }
+    .theme-toggler {
+      .dark-mode-label {
+        transform: scale(1.5);
+      }
     }
   }
 

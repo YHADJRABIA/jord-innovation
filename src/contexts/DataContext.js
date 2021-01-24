@@ -26,7 +26,7 @@ export const DataProvider = (props) => {
 
     contact: [
       {
-        name: "Mail",
+        name: "E-mail",
         path: "mailto:axel@jordinnovation.com",
         icon: "fa fa-envelope",
         id: 1,

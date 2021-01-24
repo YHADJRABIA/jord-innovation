@@ -24,7 +24,7 @@ const Footer = () => {
         &copy;{copyright.start} - {new Date().getFullYear()} {company.name}
       </small>
       <small className="developer">
-        Tillverkad & översätt av{" "}
+        {i18n.t("madeBy")}{" "}
         <span>
           <a
             href={developer.website}
